@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="V1hexuhe9dfxbuz-oyg8py">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="ClassDiagram20"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.Tools.expanded = true &#xA;toolbar.buttonRunCount = 2 &#xA;option.layout.recursive = false &#xA;toolbar.group.#DEFAULT.expanded = true &#xA;toolbar.group.note.expanded = true &#xA;scrollX = 0 &#xA;scrollY = 0 &#xA;zoomFactor = 1.0 &#xA;"/>
+        <reference referencedUin="design:view:::V1hexuhe9dg697a-6p1tig">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="10,10,102,89"/>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9dfxrk8-lsr95b">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="47,85,81,81"/>
+            <reference referencedUin="design:link:::L5c53vwe9dfyprg-wljsiz:N-tdsqjue9dfxrk8-lsr95b">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="127,95"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="215,35"/>
+            </reference>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9dfy42b-wf9lbc">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="318,78,87,70"/>
+        </reference>
+        <reference referencedUin="design:view:::V1hexuhe9vsjmsrbguq72"/>
+        <reference referencedUin="design:node:::N-amcqg9e9dfyd6u-4zty6l">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="214,20,20,20"/>
+        </reference>
+        <reference referencedUin="label:$name:design:node:::N-amcqg9e9dfyd6u-4zty6l">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="208,50,33,11"/>
+        </reference>
+    </view>
+    <node uin="N-tdsqjue9dfxrk8-lsr95b">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="AbstractEntity"/>
+        <property name="@mod__implements" value="Entity"/>
+        <link uin="L5c53vwe9dfyprg-wljsiz">
+            <property name="$metaclass" value="Implementation Link"/>
+            <property name="@mod__cachedBaseName" value="Entity"/>
+            <participant referencedUin="design:node:::N-tdsqjue9dfxrk8-lsr95b" role="Client"/>
+            <participant referencedUin="design:node:::N-amcqg9e9dfyd6u-4zty6l" role="Supplier"/>
+        </link>
+    </node>
+    <node uin="N-tdsqjue9dfy42b-wf9lbc">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="AbstractFacade"/>
+    </node>
+    <node uin="N-amcqg9e9dfyd6u-4zty6l">
+        <property name="$metaclass" value="Interface20"/>
+        <property name="@__package_child" value="true"/>
+        <property name="$name" value="Entity"/>
+        <property name="@mod_usage" value="design:node:::N-tdsqjue9dfxrk8-lsr95b"/>
+    </node>
+</nodeSet>

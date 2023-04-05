@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.esood.survey.Survey" table="SURVEY">
+
+	 <id name="id" type="java.lang.Integer" column="ID">
+      	<generator class="native" />
+	</id>
+
+	<property name="response01" type="string" column="Q1"/>
+	<property name="response02" type="string" column="Q2"/>
+	<property name="response03" type="string" column="Q3"/>
+	<property name="response04" type="string" column="Q4"/>
+	<property name="response05" type="string" column="Q5"/>
+	<property name="response06" type="string" column="Q6"/>
+	<property name="response07" type="string" column="Q7"/>		
+	<property name="response08" type="string" column="Q8"/>			
+	<many-to-one name="expense" column="EXPENSE_ID" class="com.esood.expense.Expense" unique="true"/>
+    </class>
+</hibernate-mapping>

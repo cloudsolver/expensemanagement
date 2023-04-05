@@ -1,0 +1,45 @@
+<project name="entity" default="deploy" basedir=".">
+<description>ENTITIES Build file - Builds the entity jar</description>
+  <!-- set global properties for this build -->
+  <property environment="env"/>
+  <property name="SRC" location="src"/>
+  <property name="TESTS" location="tests"/>
+  <property name="BIN" location="bin"/>
+  <property name="DEPLOY_DIR" location="C:/work/mst/deploy"/>
+  <property name="COMMON_DIR" location="C:/work/mst/common"/>
+  <property name="TOMCAT_HOME" location="C:/tools/Tomcat 5.0"/>
+
+  <property name="build.compiler" value="javac1.4"/>
+	<!--deploy-->
+	<target name="deploy" depends="dist">
+		<copy file="entities.jar" todir="${DEPLOY_DIR}/entities/lib"/>
+		<copy todir="${DEPLOY_DIR}/entities/lib">
+			<fileset dir="./lib" includes="*.jar"></fileset>
+		</copy>
+	</target>
+	<!-- dist-->
+	<target name="dist" depends="compile-tests">
+		<jar destfile="entities.jar" basedir="${BIN}"/>
+	</target>
+	<!-- init -->
+	 <target name="init">
+	    <tstamp/>
+		<delete dir="${BIN}"/>
+	    <!-- Create the build directory structure used by compile -->
+	    <mkdir dir="${BIN}"/>
+	  </target>
+	<!-- compile-->
+	<target name="compile" depends="init">
+		<javac debug="true" includes="**/*.java" srcdir="${SRC}" destdir="${BIN}" classpath="C:/j2sdkee1.3.1/lib/j2ee.jar;./lib/hibernate3.jar;${COMMON_DIR}/lib/commons-logging-1.0.4.jar;${COMMON_DIR}/lib/log4j-1.2.11.jar;${COMMON_DIR}/lib/commons-beanutils.jar"/>
+		<!-- copy resource files -->
+		<copy todir="${BIN}">
+		<fileset dir="${SRC}">
+		<exclude name="**/*.java"/>
+		</fileset>
+		 </copy>
+	</target>
+	
+	<target name="compile-tests" depends="compile">
+			<javac debug="true" includes="**/*.java" srcdir="${TESTS}" destdir="${BIN}" classpath="C:/j2sdkee1.3.1/lib/j2ee.jar;./lib/hibernate3.jar;${COMMON_DIR}/lib/commons-logging-1.0.4.jar;${COMMON_DIR}/lib/log4j-1.2.11.jar;${COMMON_DIR}/lib/commons-beanutils.jar;./lib/junit.jar"/>
+	</target>
+</project>

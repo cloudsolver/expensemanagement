@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.esood.expense.Expense" table="EXPENSE">
+	 <id name="id" type="java.lang.Integer" column="ID">
+      	<generator class="native" />
+	</id>
+	<property name="name" type="string" column="EXP_NAME"/>
+	<property name="costCenter" type="string" column="EXP_COST_CENTER"/>
+	<property name="purpose" type="string" column="EXP_PURPOSE"/>
+	<property name="approver" type="string" column="EXP_APPROVER"/>
+	<property name="date" type="date" column="EXP_DATE"/>
+	<property name="status" type="integer" column="EXP_STATUS"/>
+	<property name="taskDuration" type="long" column="EXP_TASK_DURATION"/>
+	<property name="applicationType" type="string" column="EXP_APP_TYPE"/>
+	<property name="applicationVersion" type="integer" column="EXP_APP_VERSION"/>	
+	
+
+	<many-to-one name="customer" column="EXP_CUSTOMER_ID" class="com.esood.customer.Customer"/>
+	<set name="expenseLineItems" lazy="true" cascade="all" inverse="true">
+		<key column="EXPENSE_ID"/>
+		<one-to-many class="com.esood.expense.AbstractExpenseLineItem"/>
+	</set>
+    </class>
+</hibernate-mapping>

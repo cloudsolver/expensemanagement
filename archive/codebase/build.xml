@@ -1,0 +1,38 @@
+<project name="all" default="move" basedir=".">
+	<property file="build.properties"/>
+	<!--
+	<property name="DEPLOY_HOME" value="${env.MST_DEPLOY}"></property>
+	<property name="LOG_HOME" value="${env.MST_LOG}"></property>
+	<property name="TEMP_DEPLOY_DIR" location="C:/work/mst/deploy"/>
+	-->
+	<target name="move" depends="ts">
+		<copy file="${TEMP_DEPLOY_DIR}/mst.war" todir="${DEPLOY_HOME}"/>
+	</target>
+	
+	<target name="ts" depends="deploy">
+	  		<tstamp>
+	  			<format property="TIME" pattern="HH:mm:ss"/>
+	    	</tstamp>
+	    	<echo level="info">
+		       	Time Finished: ${TIME}
+	    	</echo>
+	    </target>
+	
+<target name="deploy" depends="init">	
+<ant dir="entities" antfile="build.xml"/>
+<ant dir="portalWeb" antfile="build.xml"/>
+</target>
+
+<target name="init" depends="clean">
+	<mkdir dir="${TEMP_DEPLOY_DIR}"/>
+	</target>
+<target name="clean" >
+	<echo message="Cleaning the war and removing the directory"/>
+	<delete failonerror="no" file="${DEPOY_HOME}/mst.war"/>
+	<delete failonerror="no" dir="${DEPLOY_HOME}/mst"></delete>
+	<delete failonerror="no">
+		    <fileset dir="${LOG_HOME}" includes="**/*.txt"/>
+	</delete>
+	<delete failonerror="yes" dir="${TEMP_DEPLOY_DIR}"></delete>
+</target>
+</project>

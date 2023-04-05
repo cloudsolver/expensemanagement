@@ -1,0 +1,38 @@
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+  <!-- ========================= Data Source Configuration =============================== -->
+  <!-- ========================= Form Bean Definitions =================================== -->
+  <form-beans>
+	<form-bean name="registerForm" type="com.esood.customer.ui.RegisterForm" />
+  <form-bean name="surveyForm" type="com.esood.survey.ui.SurveyForm" /><form-bean name="expenseForm" type="com.esood.expense.ui.form.ExpenseForm" /><form-bean name="eduExpenseLineItem" type="com.esood.expense.ui.form.EduExpenseLineItem" /><form-bean name="stdExpenseLineItem" type="com.esood.expense.ui.form.StdExpenseLineItem" /><form-bean name="webForm" type="com.esood.ui.WebForm" /><form-bean name="surveyWizardForm" type="com.esood.survey.ui.SurveyWizardForm" /></form-beans><global-exceptions><exception type="com.esood.ui.ActionException" key="error.RuntimeException" scope="request" path="/common/error.jsp" /><exception type="com.esood.ui.TimeoutException" key="error.TimeOut" path="/common/timeout.jsp" scope="request" /></global-exceptions>
+
+<!-- GLOBAL EXCEPTIONS -->
+
+  <!-- ======================== Global Forward Definitions ============================== -->
+
+  <global-forwards>
+        
+
+  <forward name="runtimeException" path="/common/error.jsp" redirect="true" /></global-forwards>
+
+  <!-- ======================== Action Mapping Definitions ============================== -->
+
+  <action-mappings>
+	<action path="/customer/register" name="registerForm" type="com.esood.customer.ui.RegisterAction" input="/customer/register.jsp" scope="session" validate="true">
+		<forward name="next" path="/customer/profile.do?cmd=read" />
+		<forward name="failure" path="/customer/failure.jsp" />
+		<forward name="read" path="/customer/register.jsp" />
+	</action>
+  
+	
+	
+	<action path="/customer/login" name="registerForm" type="com.esood.customer.ui.LoginAction" input="/customer/login.jsp" validate="false" scope="session" unknown="false">
+		<forward name="success" path="/home.do?cmd=read" />
+		<forward name="read" path="/customer/login.jsp" redirect="false" />
+	   
+	</action>
+
+  <action path="/customer/logoff" type="com.esood.customer.ui.LogoffAction"><forward name="success" path="/home.do?cmd=read" redirect="false" /></action><action path="/customer/profile" type="com.esood.customer.ui.CustomerProfileAction" name="registerForm" validate="true" scope="session" input="/customer/demographics.jsp"><forward name="next" path="/customer/success.jsp" redirect="false" /><forward name="failure" path="/customer/demographics.jsp" redirect="false" /><forward name="read" path="/customer/demographics.jsp" redirect="false" /></action><action path="/customer/survey" type="com.esood.survey.ui.SurveyAction" name="surveyForm" validate="true" scope="request" input="/customer/survey/surveyHome.jsp"><forward name="success" path="/customer/survey/success.jsp" redirect="false" /><forward name="read" path="/customer/survey/surveyHome.jsp" redirect="false" /><forward name="failure" path="/customer/survey/failure.jsp" redirect="false" /></action><action path="/expense/home" type="com.esood.expense.ui.ExpenseHomeAction" name="expenseForm" validate="false" scope="request"><forward name="read" path="/expense/expenseHome.jsp" redirect="false" /></action><action path="/expense/general" type="com.esood.expense.ui.ExpenseGeneralAction" name="expenseForm" scope="request" validate="true" input="/expense/expenseInformation.jsp"><forward name="read" path="/expense/expenseInformation.jsp" redirect="false" /><forward name="next" redirect="false" path="/expense/expenseLineItems.do?cmd=read" contextRelative="false" /></action><action path="/expense/expenseLineItems" type="com.esood.expense.ui.ExpenseLineItemsAction" name="webForm" validate="false" scope="request"><forward name="read" path="/expense/expenseLineItems.jsp" redirect="false" /><forward name="next" redirect="false" path="/expense/review.do?cmd=read" /></action><action path="/expense/review" type="com.esood.expense.ui.ExpenseReviewAction" name="expenseForm" validate="false" scope="request"><forward name="next" path="/expense/expenseSubmitted.jsp" redirect="false" /><forward name="read" path="/expense/expenseReview.jsp" redirect="false" /></action><action path="/expense/edu/detail" type="com.esood.expense.ui.EduExpenseDetailAction" name="eduExpenseLineItem" validate="true" scope="request" input="/expense/eduExpenseDetail.jsp"><forward name="next" redirect="false" path="/expense/expenseLineItems.do?cmd=read" /><forward name="read" path="/expense/eduExpenseDetail.jsp" redirect="false" /></action><action path="/expense/std/detail" type="com.esood.expense.ui.StdExpenseDetailAction" name="stdExpenseLineItem" scope="request" validate="true" input="/expense/stdExpenseDetail.jsp"><forward name="next" redirect="false" path="/expense/expenseLineItems.do?cmd=read" /><forward name="read" redirect="false" path="/expense/stdExpenseDetail.jsp" /></action><action path="/home" type="com.esood.home.ui.HomeAction" name="webForm" validate="false" scope="request"><forward name="read" path="/home.jsp" redirect="false" /></action><action path="/survey" type="com.esood.survey.ui.SurveyWizardAction" name="surveyWizardForm" scope="request" validate="true" input="/survey/index.jsp"><forward name="read" path="/survey/index.jsp" redirect="false" /><forward name="failure" path="/survey/failure.jsp" redirect="false" /><forward name="success" path="/survey/success.jsp" redirect="false" /></action></action-mappings><plug-in className="org.apache.struts.validator.ValidatorPlugIn"><set-property property="pathnames" value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" /></plug-in>
+  
+
+</struts-config>

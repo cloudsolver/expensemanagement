@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="V1hexuhe9dg697a-6p1tig">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="ClassDiagram20"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.Tools.expanded = true &#xA;toolbar.buttonRunCount = 2 &#xA;option.layout.recursive = false &#xA;toolbar.group.#DEFAULT.expanded = true &#xA;toolbar.group.note.expanded = true &#xA;scrollX = 0 &#xA;scrollY = 0 &#xA;zoomFactor = 1.0 &#xA;"/>
+        <reference referencedUin="design:node:::N-tdsqjue9dg6rv2ktrap2">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="238,20,80,70"/>
+            <reference referencedUin="design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="238,50"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="90,50"/>
+            </reference>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9dg7skpxwhzsp">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="26,517,118,70"/>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9vsviq8kgsegz">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="10,10,80,70"/>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9dg7kp8-wifl25">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="123,229,92,70"/>
+            <reference referencedUin="design:link:::L-cqrrche9dgavw4q8kd1h:N-tdsqjue9dg7kp8-wifl25">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="187,229"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="259,90"/>
+            </reference>
+        </reference>
+        <reference referencedUin="label:supplierCardinality:design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="100,36,13,11"/>
+        </reference>
+        <reference referencedUin="label:clientCardinality:design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="215,36,13,11"/>
+        </reference>
+    </view>
+    <node uin="N-tdsqjue9dg6rv2ktrap2">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="User"/>
+        <link uin="L-cqrrche9vsvndzkaj72e">
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@clientCardinality" value="1"/>
+            <property name="@supplierCardinality" value="1"/>
+            <participant referencedUin="design:node:::N-tdsqjue9dg6rv2ktrap2" role="Client"/>
+            <participant referencedUin="design:node:::N-tdsqjue9vsviq8kgsegz" role="Supplier"/>
+        </link>
+    </node>
+    <node uin="N-tdsqjue9dg7kp8-wifl25">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="CustomerFacade"/>
+        <link uin="L-cqrrche9dgavw4q8kd1h">
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@directed" value=""/>
+            <participant referencedUin="design:node:::N-tdsqjue9dg7kp8-wifl25" role="Client"/>
+            <participant referencedUin="design:node:::N-tdsqjue9dg6rv2ktrap2" role="Supplier"/>
+        </link>
+    </node>
+    <node uin="N-tdsqjue9dg7skpxwhzsp">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="RegistrationException"/>
+    </node>
+    <node uin="N-tdsqjue9vsviq8kgsegz">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="Customer"/>
+    </node>
+</nodeSet>

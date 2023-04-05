@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.esood.refdata.Question" table="QUESTION">
+	    <id name="id" type="java.lang.Integer" column="ID">
+        	<generator class="native" />
+		</id>
+    <property name="questionCode" type="java.lang.String" column="CODE"/>
+    <property name="questionText" type="java.lang.String" column="TEXT" />
+    <list name="possibleAnswers" table="ANSWERS">
+    	<key column="QUESTION_ID"/>
+    	<index column="ID"/>
+    	<one-to-many class="com.esood.refdata.Answer"/>
+    </list>
+    </class>
+</hibernate-mapping>

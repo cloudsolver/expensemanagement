@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="V1hexuhe9vsjmsrbguq72">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="ClassDiagram20"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.Tools.expanded = true&#xA;toolbar.buttonRunCount = 2&#xA;option.layout.recursive = false&#xA;toolbar.group.#DEFAULT.expanded = true&#xA;toolbar.group.note.expanded = true&#xA;scrollX = 0&#xA;scrollY = 0&#xA;zoomFactor = 1.0&#xA;"/>
+        <reference referencedUin="design:node:::N-tdsqjue9vsjyzgohyiiz">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="199,102,80,70"/>
+            <reference referencedUin="design:link:::L-cqrrche9vskr54rmo87h:N-tdsqjue9vsjyzgohyiiz">
+                <property name="@location_set_by_user" value="true"/>
+                <property name="sourceAnchor" value="279,118"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="398,118"/>
+            </reference>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9vska9l-h713uo">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="398,110,80,70"/>
+            <reference referencedUin="design:link:::L-cqrrche9vsl5ag-nhh7qb:N-tdsqjue9vska9l-h713uo">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="440,180"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="440,267"/>
+            </reference>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9vskfhm-vtsdxh">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="402,267,80,70"/>
+        </reference>
+        <reference referencedUin="label:supplierCardinality:design:link:::L-cqrrche9vskr54rmo87h:N-tdsqjue9vsjyzgohyiiz">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="363,104,25,11"/>
+        </reference>
+        <reference referencedUin="label:supplierCardinality:design:link:::L-cqrrche9vsl5ag-nhh7qb:N-tdsqjue9vska9l-h713uo">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="443,246,25,11"/>
+        </reference>
+        <reference referencedUin="label:clientCardinality:design:link:::L-cqrrche9vskr54rmo87h:N-tdsqjue9vsjyzgohyiiz">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="289,104,13,11"/>
+        </reference>
+    </view>
+    <node uin="N-tdsqjue9vsjyzgohyiiz">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="Questionnaire"/>
+        <link uin="L-cqrrche9vskr54rmo87h">
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@clientCardinality" value="1"/>
+            <property name="@supplierCardinality" value="1..*"/>
+            <participant referencedUin="design:node:::N-tdsqjue9vsjyzgohyiiz" role="Client"/>
+            <participant referencedUin="design:node:::N-tdsqjue9vska9l-h713uo" role="Supplier"/>
+        </link>
+    </node>
+    <node uin="N-tdsqjue9vska9l-h713uo">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="Question"/>
+        <link uin="L-cqrrche9vsl5ag-nhh7qb">
+            <property name="$metaclass" value="Association Link"/>
+            <property name="@supplierCardinality" value="1..*"/>
+            <participant referencedUin="design:node:::N-tdsqjue9vska9l-h713uo" role="Client"/>
+            <participant referencedUin="design:node:::N-tdsqjue9vskfhm-vtsdxh" role="Supplier"/>
+        </link>
+    </node>
+    <node uin="N-tdsqjue9vskfhm-vtsdxh">
+        <property name="$metaclass" value="Class20"/>
+        <property name="$name" value="Answer"/>
+    </node>
+</nodeSet>

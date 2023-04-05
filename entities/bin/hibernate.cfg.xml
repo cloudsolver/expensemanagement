@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 2.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>    
+<!--        <property name="connection.datasource">jdbc:mysql://localhost/mst</property>-->
+        <property name="connection.datasource">java:comp/env/jdbc/mst</property>
+        <property name="use_outer_join">false</property>
+        <property name="show_sql">false</property>		
+  		<property name="dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <property name="max_fetch_depth">0</property>
+		<!-- MAPPING -->
+        <mapping resource="com/esood/customer/User.hbm.xml"/>
+        <mapping resource="com/esood/customer/Customer.hbm.xml"/>
+        <mapping resource="com/esood/expense/Expense.hbm.xml"/>
+        <mapping resource="com/esood/expense/ExpenseLineItem.hbm.xml"/>
+        <mapping resource="com/esood/survey/Survey.hbm.xml"/>        
+    </session-factory>
+</hibernate-configuration>

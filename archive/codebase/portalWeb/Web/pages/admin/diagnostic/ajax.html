@@ -1,0 +1,24 @@
+<html>
+<head>
+<script language="JavaScript" src="../javascript/AJAX.js">
+</script>
+<script>
+function test()
+	{
+		alert("Hello World");
+		var ajax=new AJAX();
+		ajax.callPage("index.html", pageCallback);
+	}
+function pageCallback(response)
+	{
+		alert(response);
+	}
+</script>
+<title>Ajax</title>
+</head>
+<body>
+<div>
+Test: <a href="#" onclick="test()">callPage</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<%@ page language="java" %>
+<%@ taglib uri="/WEB-INF/tlds/struts-tiles.tld" prefix="tiles" %>
+<%@ taglib uri="/WEB-INF/tlds/struts-bean.tld" prefix="bean" %>
+<%@ taglib uri="/WEB-INF/tlds/struts-html.tld" prefix="html" %>
+<%@ taglib uri="/WEB-INF/tlds/struts-logic.tld" prefix="logic" %>
+
+<tiles:insert page="/common/layout/layout02.jsp" flush="true">
+<tiles:put name="title" value="Survey"/>
+  <tiles:put name="header" value="/common/header.jsp" />
+  <tiles:put name="main" type="string">
+    <bean:message key="survey.help"/>
+ 	<logic:equal name="surveyWizardForm" property="questionId" value="0">
+		<bean:message key="survey.intro"/>
+	</logic:equal>	 	
+	<h2>Quality Survey. <i>Question (<bean:write name="surveyWizardForm" property="next"/> of 8) </i></h2>
+	<html:form action="/survey">
+		<bean:define id="questionId" name="surveyWizardForm" property="questionId" type="java.lang.String"/>
+		<html:hidden property="cmd" value="create"/>
+		<html:hidden property="questionId" value="<%=questionId %>"/>
+		<table class="form">
+			<th width="400px"><h3><bean:write name="surveyWizardForm" property="question"/></h3></th>
+		<logic:iterate id="label" name="efficiencyAnswers">
+			<tr>
+			<td align="left">					
+				<html:radio property="answer" value="value" idName="label">
+				<bean:write name="label" property="label"/>
+				</html:radio>
+			</td>
+			</tr>		
+		</logic:iterate>
+	
+	<tr>
+		<td>
+		<logic:greaterThan name="surveyWizardForm" property="questionId" value="0">
+			<button type="button" onclick='location.href="/mst/survey.do?cmd=read&questionId=<bean:write name="surveyWizardForm" property="back"/>"'>Back</button>
+		</logic:greaterThan>
+		<logic:lessThan name="surveyWizardForm" property="questionId" value="7">
+			<html:submit value="Next"/>
+		</logic:lessThan>
+		<logic:equal name="surveyWizardForm" property="questionId" value="7">
+			<html:submit value="Save"/>	
+		</logic:equal>
+		</td>
+	</tr>
+	</table>
+	</html:form>
+	</tiles:put> 
+  <tiles:put name="left" value="/common/left.jsp" />
+  <tiles:put name="footer" value="/common/footer.jsp" />
+</tiles:insert>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="V1hexuhe9vsu1dp-h93271">
+        <property name="$metaclass" value="ClassDiagram20"/>
+        <property name="$description" value=""/>
+        <property name="@__options" value="toolbar.group.Tools.expanded = true&#xA;toolbar.buttonRunCount = 2&#xA;toolbar.group.#DEFAULT.expanded = true&#xA;toolbar.group.note.expanded = true&#xA;scrollX = 0&#xA;scrollY = 0&#xA;zoomFactor = 1.0&#xA;"/>
+        <reference referencedUin="design:node:::N-tdsqjue9dg6rv2ktrap2">
+            <property name="$imported" value=""/>
+            <property name="$shortcutReference" value=""/>
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="87,60,136,80"/>
+            <reference referencedUin="design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+                <property name="@location_set_by_user" value="false"/>
+                <property name="sourceAnchor" value="223,91"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="242,91"/>
+            </reference>
+        </reference>
+        <reference referencedUin="design:node:::N-tdsqjue9vsviq8kgsegz">
+            <property name="$imported" value=""/>
+            <property name="$shortcutReference" value=""/>
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="242,42,161,80"/>
+        </reference>
+        <reference referencedUin="label:supplierCardinality:design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="236,77,13,11"/>
+        </reference>
+        <reference referencedUin="label:clientCardinality:design:link:::L-cqrrche9vsvndzkaj72e:N-tdsqjue9dg6rv2ktrap2">
+            <property name="@location_set_by_user" value="false"/>
+            <property name="bounds" value="226,136,13,11"/>
+        </reference>
+    </view>
+</nodeSet>

@@ -1,0 +1,78 @@
+<project name="web" default="war" basedir=".">
+<description>WAR build file - Builds the mst war</description>
+  <!-- set global properties for this build -->
+    <property environment="env"/>
+	<property name="DEPLOY_DIR" location="C:/work/mst/deploy"/>
+	<property name="COMMON_DIR" location="C:/work/mst/common"/>
+   	<property name="SRC" location="${DEPLOY_DIR}/portalWeb/src"/>
+	<property name="BIN" location="${DEPLOY_DIR}/portalWeb/bin"/>
+	<property name="J2EE_HOME" value="${env.J2EE_HOME}"/>
+ 	<property name="TOMCAT_HOME" location="C:/tools/Tomcat 5.0"/>
+ 	<property name="build.compiler" value="javac1.4"/>
+	<!-- init -->
+	<target name="init">
+	    <description>
+	    (1) Copy the project to the deploy directory
+	    (2) Create a new bin directory
+	    </description>
+		<delete dir="${DEPLOY_DIR}/portalWeb"></delete>
+		<mkdir dir="${DEPLOY_DIR}/portalWeb"/>
+		 <mkdir dir="${DEPLOY_DIR}/portalWeb/bin"/>
+		
+		<copy todir="${DEPLOY_DIR}/portalWeb/src">
+			<fileset dir="src"></fileset>
+	 	</copy>
+	 	<copy todir="${DEPLOY_DIR}/portalWeb/Web">
+			<fileset dir="Web"></fileset>
+	 	</copy>
+		
+	  </target>
+
+	<!-- compile-->
+		<target name="compile" depends="init">
+			<javac debug="true" srcdir="${SRC}" destdir="${BIN}">
+				<classpath>
+				<fileset dir="${DEPLOY_DIR}/portalWeb/Web/WEB-INF/lib">
+					<patternset id="mst_library">
+						<include name="**/*.jar"/>
+					</patternset>
+				</fileset>
+				<fileset dir="${J2EE_HOME}/lib">
+					<patternset id="j2ee">
+						<include name="j2ee.jar"/>
+					</patternset>
+				</fileset>
+				<fileset dir="${COMMON_DIR}/lib">
+					<patternset id="common library">
+						<include name="**/*.jar"/>
+					</patternset>
+				</fileset>
+					<fileset dir="${DEPLOY_DIR}/entities/lib">
+						<patternset id="entities library">
+							<include name="**/*.jar"/>
+						</patternset>
+					</fileset>
+				</classpath>
+			</javac>
+			<copy todir="${BIN}">
+				<fileset dir="${SRC}">
+					<include name="**/*.properties" />
+					<include name="**/*.txt" />
+				</fileset>
+			</copy>
+		</target>
+
+	<!-- dist-->
+	<target name="war" depends="compile">
+		<war 	destfile="${DEPLOY_DIR}/mst.war" 
+					webxml="${DEPLOY_DIR}/portalWeb/Web/WEB-INF/web.xml">
+			<webinf dir="${DEPLOY_DIR}/portalWeb/Web/WEB-INF"/>
+			<fileset dir="${DEPLOY_DIR}/portalWeb/Web/pages"/>
+			<lib dir="${DEPLOY_DIR}/entities/lib"/>
+			<lib dir="${COMMON_DIR}/lib"/>
+			<classes dir="${BIN}"/>			
+		</war>
+	</target>
+	
+	
+</project>

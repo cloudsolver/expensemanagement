@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<web:web-app 
+xmlns:dep="http://geronimo.apache.org/xml/ns/deployment-1.2" 
+xmlns:name="http://geronimo.apache.org/xml/ns/naming-1.2" 
+xmlns:web="http://geronimo.apache.org/xml/ns/j2ee/web-2.0.1">
+
+	<dep:environment>
+      	<dep:moduleId>
+            <dep:artifactId>MyWebApp</dep:artifactId>
+    	</dep:moduleId>
+        <dep:dependencies>
+            <dep:dependency>
+                <dep:groupId>console.dbpool</dep:groupId>
+                <dep:artifactId>mst_mysql</dep:artifactId>
+            </dep:dependency>
+        </dep:dependencies>
+    </dep:environment>
+
+    <web:context-root>/mstWeb</web:context-root>
+ 
+    <name:resource-ref>
+        <name:ref-name>jdbc/mst</name:ref-name>
+        <name:resource-link>mst_mysql</name:resource-link>
+    </name:resource-ref>
+    
+</web:web-app>

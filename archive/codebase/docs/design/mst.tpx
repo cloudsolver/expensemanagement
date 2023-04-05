@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Together XML Project-->
+<project>
+  <property category="config" name="options.umlVersion" value="20"/>
+  <property category="config" name="project_browser.dblClickExpand" value="true"/>
+  <property category="config" name="project_browser.diagramsExpandable" value="true"/>
+  <property category="config" name="project_browser.showDiagramType" value="false"/>
+  <property category="config" name="project_browser.showFQNames" value="false"/>
+  <property category="config" name="project_browser.sort.Class.propertyname" value="$name, $type"/>
+  <property category="config" name="project_browser.sort.Package" value="Package, Class, DesignDiagram"/>
+  <property category="config" name="project_browser.sortingEnabled" value="true"/>
+  <property category="personality" name="personality" value="com.togethersoft.modules.primetimebridge.personality.UML14Personality "/>
+  <property category="sys" name="DefaultDiagram" value="diagrams"/>
+  <property category="sys" name="Diagram" value="diagrams"/>
+  <property category="sys" name="WorkingDirectory" value="."/>
+  <property category="together" name="language" value="design"/>
+  <file path="mst.html"/>
+</project>

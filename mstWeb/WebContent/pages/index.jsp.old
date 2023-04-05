@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>RESEARCH PARTICIPANT CONSENT FOR</title>
+<style>
+<!--
+ p.MsoNormal
+	{mso-style-parent:"";
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	margin-left:0in; margin-right:0in; margin-top:0in}
+h1
+	{margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single; margin-left:0in; margin-right:0in; margin-top:0in}
+p.MsoHeader
+	{margin-bottom:.0001pt;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	margin-left:0in; margin-right:0in; margin-top:0in}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<script language="JavaScript">
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</script>
+</head>
+
+<body onload="FP_preloadImgs(/*url*/'button1F.jpg', /*url*/'button20.jpg', /*url*/'button22.jpg', /*url*/'button23.jpg')">
+
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<b><font size="3">RESEARCH PARTICIPANT CONSENT FORM<br>
+“Educator and Volunteer Online Consent”<br>
+Perceptions of Extension Educators, 4-H Volunteers, and 4-H Members Regarding 
+the Use of Retinal Imaging to Identify 4-H Beef, Sheep, and Goat Projects<br>
+Dr. Clinton P. Rusk and Brian Howell<br>
+Youth Development and Agricultural Education Department<br>
+Purdue University</font></b><font size="3"><br>
+&nbsp;<br>
+<u>Purpose of Research</u><br>
+The purpose of this study is to determine how the use of retinal scanning as a 
+method of identifying 4-H beef, sheep, and goats has been perceived by Extension 
+Educators, the volunteers who collected the retinal images, and 4-H members 
+whose animals were retinal scanned in 2005. </font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Specific Procedures to be Used</u><br>
+I will be asked to complete an on-line survey.&nbsp; </font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Duration of Participation</u><br>
+This survey consists of 15-20 questions and should not take longer than 30 
+minutes to complete.</font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Benefits to the Individual</u><br>
+I understand there are no direct benefits for participating in this study. 
+However, by participating in this survey, I will provide feedback that will help 
+the 4-H Youth Development program identify the benefits and problems associated 
+with identifying 4-H livestock projects using retinal images. </font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Risks to the Individual </u><br>
+I understand that the risks involved with participating in this survey are 
+minimal and no more than I would encounter in everyday life.</font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Confidentiality&nbsp; </u><br>
+The data and all other feedback I provide will remain confidential. I will be 
+assigned a number which will be used for tracking and recording purposes only. 
+This number will show that I returned the survey and will not receive any follow 
+up mailings.&nbsp; My name will not be associated with any reports or other materials 
+released by Purdue University or the researcher. All data, addresses, and 
+confidential information will be maintained indefinitely in a secure location in 
+the Youth Development and Agricultural Education Department at Purdue 
+University.</font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Voluntary Nature of Participation</u><br>
+I do not have to participate in this research project.&nbsp; If I agree to 
+participate I can withdraw my participation at any time without penalty.</font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font size="3"><br>
+<u>Human Subject Statement:</u><br>
+If I have any questions about this research project, I can contact Brian Howell 
+at (765) 496-6881. If I have concerns about the treatment of research 
+participants, I can contact the Committee on the Use of Human Research Subjects 
+at Purdue University, 610 Purdue Mall, Hovde Hall Room 307, West Lafayette, IN 
+47907-2040. The phone number for the Committee's secretary is (765) 494-5942.&nbsp; 
+The email address is irb@purdue.edu.<br>
+&nbsp;<br>
+&nbsp;<br>
+I HAVE HAD THE OPPORTUNITY TO READ THIS CONSENT FORM, ASK QUESTIONS ABOUT THE 
+RESEARCH PROJECT AND AM PREPARED TO PARTICIPATE IN THIS PROJECT.</font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<table border="1" width="59%" id="table1">
+	<tr>
+		<td width="300"><a href="educators.htm">
+		<img border="0" id="img6" src="button21.jpg" height="60" width="300" alt="EDUCATORS: Click Here to Proceed to the Survey" onmouseover="FP_swapImg(1,0,/*id*/'img6',/*url*/'button22.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img6',/*url*/'button21.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img6',/*url*/'button23.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img6',/*url*/'button22.jpg')" fp-style="fp-btn: Border Bottom 1" fp-title="EDUCATORS: Click Here to Proceed to the Survey"></a></td>
+		<td><a href="4H%20Members%20and%20Family%20Members.htm">
+		<img border="0" id="img5" src="button1E.jpg" height="60" width="300" alt="VOLUNTEERS: Click Here to Proceed to the Survey" onmouseover="FP_swapImg(1,0,/*id*/'img5',/*url*/'button1F.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img5',/*url*/'button1E.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img5',/*url*/'button20.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img5',/*url*/'button1F.jpg')" fp-style="fp-btn: Border Bottom 1; fp-proportional: 0" fp-title="VOLUNTEERS: Click Here to Proceed to the Survey"></a></td>
+	</tr>
+</table>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">
+<font face="Arial" color="navy" size="2">
+<span style="FONT-SIZE: 10pt; COLOR: navy; FONT-FAMILY: Arial">IRB number is 
+0510003126</span></font></p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+<p class="MsoHeader" style="margin-left: 0; margin-right: 0; margin-top: 0in; margin-bottom: .0001pt" align="left">&nbsp;</p>
+
+</body>
+
+</html>

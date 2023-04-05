@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="V1hexuhe9dfw73l-9hl8u6">
+        <property name="$defaultDiagram" value="true"/>
+        <property name="$metaclass" value="ClassDiagram20"/>
+        <property name="$defaultDiagram" value=""/>
+        <property name="@__options" value="toolbar.group.Tools.expanded = true &#xA;toolbar.buttonRunCount = 2 &#xA;toolbar.group.#DEFAULT.expanded = true &#xA;toolbar.group.note.expanded = true &#xA;scrollX = 0 &#xA;scrollY = 0 &#xA;zoomFactor = 1.0 &#xA;"/>
+        <reference referencedUin="design:view:::V1hexuhe9dfwy89j26q94">
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="10,10,80,68"/>
+        </reference>
+        <reference referencedUin="design:view:::V1hexuhe9vsu1dp-h93271">
+            <property name="$shortcutReference" value=""/>
+            <property name="@location_set_by_user" value="true"/>
+            <property name="bounds" value="208,1,116,51"/>
+        </reference>
+    </view>
+</nodeSet>

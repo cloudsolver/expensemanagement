@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 2.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.esood.expense.AbstractExpenseLineItem" table="EXPENSE_LINE_ITEM">
+	 <id name="id" type="java.lang.Integer" column="ID">
+      	<generator class="native" />
+	</id>
+	<discriminator type="string" column="LI_TYPE"/>
+	<many-to-one name="expense" column="EXPENSE_ID" class="com.esood.expense.Expense"/>
+	
+	<subclass name="com.esood.expense.StandardExpenseLineItem" discriminator-value="STD">
+		<property name="qualified" type="true_false" column="LI_EXP_QUALIFIED"/>
+		<property name="transactionDate" type="java.util.Date" column="LI_EXP_TX_DATE"/>
+		<property name="transactionAmount" type="java.lang.Double" column="LI_EXP_TX_AMT"/>
+		<!-- The LI_EXP_TYPE is the drop-downs like Cell Phone, Hotel etc) -->
+		<property name="transactionType" type="java.lang.String" column="LI_EXP_TX_TYPE"/>
+		<property name="transactionJustification" type="java.lang.String" column="LI_EXP_TX_JUSTIFICATION"/>
+	</subclass>
+	
+	<!-- Standard expense is sub-classed for education expense -->
+	<subclass name="com.esood.expense.EducationExpenseLineItem" discriminator-value="EDU">
+		<property name="qualified" type="java.lang.Boolean" column="LI_EXP_QUALIFIED"/>
+		<property name="transactionDate" type="java.util.Date" column="LI_EXP_TX_DATE"/>
+		<property name="transactionAmount" type="java.lang.Double" column="LI_EXP_TX_AMT"/>
+		<property name="transactionJustification" type="java.lang.String" column="LI_EXP_TX_JUSTIFICATION"/>
+		<property name="startDate" type="java.util.Date" column="LI_EDU_START_DATE"/>
+		<property name="endDate" type="java.util.Date" column="LI_EDU_END_DATE"/>
+		<property name="schoolName" type="java.lang.String" column="LI_EDU_SCHOOL_NAME"/>
+		<property name="courseName" type="java.lang.String" column="LI_EDU_COURSE_NAME"/>
+		<property name="grade" type="java.lang.String" column="LI_EDU_GRADE"/>
+		<property name="educationLevel" type="string" column="LI_EDU_LEVEL"/>
+	</subclass>
+	
+    </class>
+</hibernate-mapping>

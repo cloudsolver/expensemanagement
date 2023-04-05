@@ -1,0 +1,6 @@
+content.layout.xml.[0]=<?xml version="1.0" encoding="UTF-8"?>`r`n<project-layout>`r`n  <tab_container selected_index="1">`r`n    <tab node_name="diagrams/default.txvpck"/>`r`n    <tab node_name="diagrams/Class Diagram.txvClassDiagram20"/>`r`n    <tab node_name="diagrams/com/esood/customer/default.txvpck"/>`r`n    <tab node_name="diagrams/com/esood/questionnaire/default.txvpck"/>`r`n  </tab_container>`r`n</project-layout>`r`n
+history.files.active[0]=diagrams/Class Diagram.txvClassDiagram20
+history.files.open.1[0]=diagrams/default.txvpck
+history.files.open.2[0]=diagrams/Class Diagram.txvClassDiagram20
+history.files.open.3[0]=diagrams/com/esood/customer/default.txvpck
+history.files.open.4[0]=diagrams/com/esood/questionnaire/default.txvpck

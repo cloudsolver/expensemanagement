@@ -1,0 +1,26 @@
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN" "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+<form-validation>
+   <global>
+      
+      
+   </global>
+   <formset>
+      
+
+      <form name="registerForm">
+         
+         
+         
+         
+         
+         
+         
+         
+      <field property="username" depends="required" page="1"><arg0 key="register.username" /></field><field property="password" page="1" depends="required"><arg0 key="register.password" /></field></form>
+      
+      
+      
+   <form name="expenseForm"><field property="costCenter" depends="required, minlength, maxlength" page="1"><arg0 key="expense.general.costcenter" /><arg1 name="minlength" key="${var:minlength}" resource="false" /><var><var-name>minlength</var-name><var-value>4</var-value></var><var><var-name>maxlength</var-name><var-value>10</var-value></var><arg1 name="maxlength" key="${var:maxlength}" resource="false" /></field><field property="name" depends="required,minlength, maxlength" page="1"><var><var-name>minlength</var-name><var-value>2</var-value></var><var><var-name>maxlength</var-name><var-value>45</var-value></var><arg0 key="expense.general.name" /><arg1 name="minlength" key="${var:minlength}" resource="false" /><arg1 name="maxlength" key="${var:maxlength}" resource="false" /></field><field property="purpose" depends="required,minlength, maxlength" page="1"><arg0 key="expense.general.purpose" /><var><var-name>minlength</var-name><var-value>5</var-value></var><var><var-name>maxlength</var-name><var-value>60</var-value></var><arg1 key="${var:minlength}" resource="false" name="minlength" /><arg1 key="${var:maxlength}" resource="false" name="maxlength" /></field><field property="dateDisplay" depends="required, date" page="1"><var><var-name>datePattern</var-name><var-value>MMM d, yyyy</var-value></var><arg0 key="expense.general.dateDisplay" /></field><field property="approver" depends="required,minlength, maxlength" page="1"><arg0 key="expense.general.approver" /><var><var-name>maxlength</var-name><var-value>80</var-value></var><var><var-name>minlength</var-name><var-value>5</var-value></var><arg1 key="${var:minlength}" name="minlength" resource="false" /><arg1 key="${var:maxlength}" name="maxlength" resource="false" /></field></form><form name="stdExpenseLineItem"><field property="transactionDate" depends="required,date"><arg0 key="expense.lineitem.std.transactionDate" /><var><var-name>datePattern</var-name><var-value>MMM d, yyyy</var-value></var></field><field property="transactionJustification" depends="required, minlength, maxlength"><arg0 key="expense.lineitem.std.transactionJustification" /><var><var-name>minlength</var-name><var-value>10</var-value></var><var><var-name>maxlength</var-name><var-value>255</var-value></var><arg1 name="minlength" key="${var:minlength}" resource="false" /><arg1 name="maxlength" key="${var:maxlength}" resource="false" /></field><field property="transactionAmount" depends="required"><arg0 key="expense.lineitem.std.transactionAmount" /></field></form><form name="eduExpenseLineItem"><field property="transactionDate" depends="required,date"><var><var-name>datePattern</var-name><var-value>MMM d, yyyy</var-value></var><arg0 key="expense.lineitem.edu.transactionDate" /></field><field property="transactionJustification" depends="required, minlength, maxlength"><var><var-name>minlength</var-name><var-value>10</var-value></var><var><var-name>maxlength</var-name><var-value>255</var-value></var><arg1 name="maxlength" key="${var:maxlength}" resource="false" /><arg1 name="minlength" key="${var:minlength}" resource="false" /><arg0 key="expense.lineitem.edu.transactionJustification" /></field><field property="transactionAmount" depends="required"><arg0 key="expense.lineitem.edu.transactionAmount" /></field><field property="courseName" depends="required"><arg0 key="expense.lineitem.edu.courseName" /></field><field property="schoolName" depends="required"><arg0 key="expense.lineitem.edu.schoolName" /></field><field property="endDate" depends="required, date"><var><var-name>datePattern</var-name><var-value>MMM d, yyyy</var-value></var><arg0 key="expense.lineitem.edu.endDate" /></field><field property="startDate" depends="required, date"><var><var-name>datePattern</var-name><var-value>MMM d, yyyy</var-value></var><arg0 key="expense.lineitem.edu.startDate" /></field></form></formset>
+   
+   
+</form-validation>
